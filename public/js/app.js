@@ -14,7 +14,7 @@ WeatherForm.addEventListener('submit',(event)=>{
 const fetchWeather = (location) =>{
     const URL = window.location.host;
     let searchpara = {location};
-    const weatherApi ='http://'+  URL +'/' + 'weather' + '?' + new URLSearchParams(searchpara);
+    const weatherApi ='/weather?' + new URLSearchParams(searchpara);
     fetch(weatherApi, ).then((response)=>{
         response.json().then((response)=>{
             displayWeatherInfo(response);
